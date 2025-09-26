@@ -10,7 +10,7 @@ ds = NCDataset(joinpath(datadir,"sst.mnmean.1990-present.nc"))
 
 @testset "EmpiricalOrthogonalFunctions" begin
 
-    sst = ds["sst"][:]
+    sst = ds["sst"][:,:,:]
     dsin = copy(sst)
 
     # @testset "EOF Construction" begin
